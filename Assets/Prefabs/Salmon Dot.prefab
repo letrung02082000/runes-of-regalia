@@ -98,12 +98,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae47c28173cb9a4eadf87f175e73f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  row: 0
   column: 0
+  row: 0
+  previousColumn: 0
+  previousRow: 0
   targetX: 0
   targetY: 0
   isMatched: 0
+  otherDot: {fileID: 0}
   swipeAngle: 0
+  swipeResist: 1
+  isColorBomb: 0
+  isColumnBomb: 0
+  isRowBomb: 0
+  isAdjacentBomb: 0
+  adjacentMarker: {fileID: 2381289803830948616, guid: 33defbd82e8842b4f96fc89f28f198a8, type: 3}
+  rowArrow: {fileID: 484416046366590634, guid: c359443cccda6a9479983ed33bcc8f5d, type: 3}
+  columnArrow: {fileID: 2404872344368270827, guid: 908b8ad14810ea84194fb2f255e7142c, type: 3}
+  colorBomb: {fileID: 1385552015604812568, guid: 1fb94ebaaa3acf641a6468c40f8f7250, type: 3}
 --- !u!58 &-2867350437314236706
 CircleCollider2D:
   m_ObjectHideFlags: 0
