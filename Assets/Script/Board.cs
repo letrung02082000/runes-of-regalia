@@ -39,11 +39,16 @@ public class Board : MonoBehaviour
   public Dot currentDot;
   private FindMatches findMatches;
   private HintManager hintManager;
+  public int basePieceValue = 20;
+  private int streakValue = 1;
+  private ScoreManager scoreManager;
+  public float refillDelay = .5f;
 
 
   // Use this for initialization
   void Start()
   {
+    scoreManager = FindObjectOfType<ScoreManager>();
     findMatches = FindObjectOfType<FindMatches>();
     hintManager = FindObjectOfType<HintManager>();
     blankSpaces = new bool[width, height];
@@ -263,6 +268,7 @@ public class Board : MonoBehaviour
                                         Quaternion.identity);
       Destroy(particle, .5f);
       Destroy(allDots[column, row]);
+      scoreManager.IncreaseScore(basePieceValue * streakValue);
       allDots[column, row] = null;
     }
   }
@@ -314,7 +320,7 @@ public class Board : MonoBehaviour
         }
       }
     }
-    yield return new WaitForSeconds(.4f);
+    yield return new WaitForSeconds(refillDelay * 0.5f);
     StartCoroutine(FillBoardCo());
   }
 
@@ -337,7 +343,7 @@ public class Board : MonoBehaviour
       }
       nullCount = 0;
     }
-    yield return new WaitForSeconds(.4f);
+    yield return new WaitForSeconds(refillDelay * 0.5f);
     StartCoroutine(FillBoardCo());
   }
 
@@ -351,6 +357,13 @@ public class Board : MonoBehaviour
         {
           Vector2 tempPosition = new Vector2(i, j + offSet);
           int dotToUse = Random.Range(0, dots.Length);
+          int maxIterations = 0;
+          while (MatchesAt(i, j, dots[dotToUse]) && maxIterations < 100)
+          {
+            maxIterations++;
+            dotToUse = Random.Range(0, dots.Length);
+          }
+          maxIterations = 0;
           GameObject piece = Instantiate(dots[dotToUse], tempPosition, Quaternion.identity);
           allDots[i, j] = piece;
           piece.GetComponent<Dot>().row = j;
@@ -382,21 +395,23 @@ public class Board : MonoBehaviour
   private IEnumerator FillBoardCo()
   {
     RefillBoard();
-    yield return new WaitForSeconds(.5f);
+    yield return new WaitForSeconds(refillDelay);
 
     while (MatchesOnBoard())
     {
-      yield return new WaitForSeconds(.5f);
+      streakValue++;
       DestroyMatches();
+      yield return new WaitForSeconds(2 * refillDelay);
     }
     findMatches.currentMatches.Clear();
     currentDot = null;
-    yield return new WaitForSeconds(.5f);
     if (IsDeadlocked())
     {
       StartCoroutine(ShuffleBoard());
     }
+    yield return new WaitForSeconds(refillDelay);
     currentState = GameState.move;
+    streakValue = 1;
   }
 
   private void SwitchPieces(int col, int row, Vector2 direction)

@@ -200,8 +200,23 @@ public class FindMatches : MonoBehaviour
         //Check if the piece is inside the board
         if (i >= 0 && i < board.width && j >= 0 && j < board.height)
         {
-          dots.Add(board.allDots[i, j]);
-          board.allDots[i, j].GetComponent<Dot>().isMatched = true;
+          if (board.allDots[i, j] != null)
+          {
+            Dot dot = board.allDots[i, j].GetComponent<Dot>();
+            if (dot != null)
+            {
+              if (dot.isColumnBomb)
+              {
+                dots.Union(GetColumnPieces(i)).ToList();
+              }
+              if (dot.isRowBomb)
+              {
+                dots.Union(GetRowPieces(j)).ToList();
+              }
+              dots.Add(board.allDots[i, j]);
+              dot.isMatched = true;
+            }
+          }
         }
       }
     }
@@ -215,8 +230,20 @@ public class FindMatches : MonoBehaviour
     {
       if (board.allDots[column, i] != null)
       {
-        dots.Add(board.allDots[column, i]);
-        board.allDots[column, i].GetComponent<Dot>().isMatched = true;
+        Dot dot = board.allDots[column, i].GetComponent<Dot>();
+        if (dot != null)
+        {
+          if (dot.isRowBomb)
+          {
+            dots.Union(GetRowPieces(i)).ToList();
+          }
+          if (dot.isAdjacentBomb)
+          {
+            dots.Union(GetAdjacentPieces(column, i)).ToList();
+          }
+          dots.Add(board.allDots[column, i]);
+          dot.isMatched = true;
+        }
       }
     }
     return dots;
@@ -229,8 +256,20 @@ public class FindMatches : MonoBehaviour
     {
       if (board.allDots[i, row] != null)
       {
-        dots.Add(board.allDots[i, row]);
-        board.allDots[i, row].GetComponent<Dot>().isMatched = true;
+        Dot dot = board.allDots[i, row].GetComponent<Dot>();
+        if (dot != null)
+        {
+          if (dot.isColumnBomb)
+          {
+            dots.Union(GetColumnPieces(i)).ToList();
+          }
+          if (dot.isAdjacentBomb)
+          {
+            dots.Union(GetAdjacentPieces(i, row)).ToList();
+          }
+          dots.Add(board.allDots[i, row]);
+          dot.isMatched = true;
+        }
       }
     }
     return dots;
