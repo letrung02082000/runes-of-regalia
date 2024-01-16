@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BackToSplash : MonoBehaviour
 {
+    public string sceneToload;
   public void OK()
   {
-    SceneManager.LoadScene("SplashScene");
+    SceneManager.LoadScene(sceneToload);
   }
   // Start is called before the first frame update
   void Start()
