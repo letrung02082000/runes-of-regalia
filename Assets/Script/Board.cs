@@ -6,7 +6,10 @@ using UnityEngine;
 public enum GameState
 {
   wait,
-  move
+  move,
+  win,
+  lose,
+  pause
 }
 
 public enum TileKind
@@ -26,6 +29,7 @@ public class TileType
 
 public class Board : MonoBehaviour
 {
+    public World world;
   public GameState currentState = GameState.move;
   public int width;
   public int height;
@@ -42,18 +46,22 @@ public class Board : MonoBehaviour
   public int basePieceValue = 20;
   private int streakValue = 1;
   private ScoreManager scoreManager;
+  private GoalManager goalManager;
   public float refillDelay = .5f;
+  public int[] scoreGoals;
 
 
   // Use this for initialization
   void Start()
   {
+    goalManager = FindObjectOfType<GoalManager>();
     scoreManager = FindObjectOfType<ScoreManager>();
     findMatches = FindObjectOfType<FindMatches>();
     hintManager = FindObjectOfType<HintManager>();
     blankSpaces = new bool[width, height];
     allDots = new GameObject[width, height];
     SetUp();
+    currentState = GameState.pause;
   }
 
   public void GenerateBlankSpaces()
@@ -266,6 +274,13 @@ public class Board : MonoBehaviour
       GameObject particle = Instantiate(destroyParticle,
                                         allDots[column, row].transform.position,
                                         Quaternion.identity);
+
+    if (goalManager != null)
+    {
+        goalManager.CompareGoal(allDots[column, row].tag.ToString());
+                goalManager.UpdateGoals();
+    }
+
       Destroy(particle, .5f);
       Destroy(allDots[column, row]);
       scoreManager.IncreaseScore(basePieceValue * streakValue);
