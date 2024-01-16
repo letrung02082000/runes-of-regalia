@@ -53,32 +53,38 @@ public class Board : MonoBehaviour
   public int basePieceValue = 20;
   private int streakValue = 1;
   private ScoreManager scoreManager;
+  private SoundsManager soundManager;
   private GoalManager goalManager;
   public float refillDelay = .5f;
   public int[] scoreGoals;
 
-    private void Awake()
+  private void Awake()
+  {
+    if (PlayerPrefs.HasKey("Current Level"))
     {
-        if (world != null)
-        {
-            if (level < world.levels.Length)
-            {
-                if (world.levels[level] != null)
-                {
-                    width = world.levels[level].width;
-                    height = world.levels[level].height;
-                    dots = world.levels[level].dots;
-                    scoreGoals = world.levels[level].scoreGoals;
-                    boardLayout = world.levels[level].boardLayout;
-                }
-            }
-        }
+      level = PlayerPrefs.GetInt("Current Level");
     }
+    if (world != null)
+    {
+      if (level < world.levels.Length)
+      {
+        if (world.levels[level] != null)
+        {
+          width = world.levels[level].width;
+          height = world.levels[level].height;
+          dots = world.levels[level].dots;
+          scoreGoals = world.levels[level].scoreGoals;
+          boardLayout = world.levels[level].boardLayout;
+        }
+      }
+    }
+  }
 
-    // Use this for initialization
-    void Start()
+  // Use this for initialization
+  void Start()
   {
     goalManager = FindObjectOfType<GoalManager>();
+    soundManager = FindObjectOfType<SoundsManager>();
     scoreManager = FindObjectOfType<ScoreManager>();
     findMatches = FindObjectOfType<FindMatches>();
     hintManager = FindObjectOfType<HintManager>();
@@ -295,15 +301,20 @@ public class Board : MonoBehaviour
         CheckToMakeBombs();
       }
 
+      if (soundManager != null)
+      {
+        soundManager.PlayRandomDestroyNoise();
+      }
+
       GameObject particle = Instantiate(destroyParticle,
                                         allDots[column, row].transform.position,
                                         Quaternion.identity);
 
-    if (goalManager != null)
-    {
+      if (goalManager != null)
+      {
         goalManager.CompareGoal(allDots[column, row].tag.ToString());
-                goalManager.UpdateGoals();
-    }
+        goalManager.UpdateGoals();
+      }
 
       Destroy(particle, .5f);
       Destroy(allDots[column, row]);

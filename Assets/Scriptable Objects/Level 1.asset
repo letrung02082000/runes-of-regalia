@@ -28,4 +28,8 @@ MonoBehaviour:
   - numberNeeded: 10
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: dd2e9b4a05821184eb16ee2ec730a2ae, type: 3}
-    matchValue: Teal Dot
+    matchValue: Blue Dot
+  - numberNeeded: 10
+    numberCollected: 0
+    goalSprite: {fileID: 21300000, guid: ad613cc7e20d3e248b6ec9ccddbf872b, type: 3}
+    matchValue: Magenta Dot
