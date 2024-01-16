@@ -2510,6 +2510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   world: {fileID: 11400000, guid: fd7d04f181ebd8045b380ea052a08654, type: 2}
+  level: 2
   currentState: 1
   width: 7
   height: 10
@@ -2523,19 +2524,7 @@ MonoBehaviour:
   - {fileID: 6801755934501586907, guid: f139ea5dc222e104d82c52785981a572, type: 3}
   - {fileID: 5614689899881130707, guid: d90fdddf5ad18bd4e87b488ea3828795, type: 3}
   destroyParticle: {fileID: 5673326004656722613, guid: c367a701c0acfa14ab49a181f350cead, type: 3}
-  boardLayout:
-  - x: 0
-    y: 0
-    tileKind: 1
-  - x: 6
-    y: 9
-    tileKind: 1
-  - x: 6
-    y: 0
-    tileKind: 1
-  - x: 0
-    y: 9
-    tileKind: 1
+  boardLayout: []
   currentDot: {fileID: 0}
   basePieceValue: 20
   refillDelay: 0.5

@@ -12,3 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9773da5d5a8be42419de2078406f3993, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
+  width: 4
+  height: 4
+  boardLayout: []
+  dots:
+  - {fileID: 1244618534027213999, guid: b5193503d198295478cf0336a3aa95aa, type: 3}
+  - {fileID: 6801755934501586907, guid: f139ea5dc222e104d82c52785981a572, type: 3}
+  - {fileID: 8281104633156052438, guid: f04c3bd585e6a114dbc00e8669cad34d, type: 3}
+  - {fileID: 5614689899881130707, guid: d90fdddf5ad18bd4e87b488ea3828795, type: 3}
+  scoreGoals: 64000000
+  endGameRequirements:
+    gameType: 0
+    counterValue: 10
+  levelGoals:
+  - numberNeeded: 7
+    numberCollected: 0
+    goalSprite: {fileID: 21300000, guid: dd2e9b4a05821184eb16ee2ec730a2ae, type: 3}
+    matchValue: Teal Dot
