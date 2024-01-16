@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class BackToSplash : MonoBehaviour
 {
-    public string sceneToload;
+  public string sceneToload;
   public void OK()
   {
     SceneManager.LoadScene(sceneToload);

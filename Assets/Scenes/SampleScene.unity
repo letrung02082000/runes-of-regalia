@@ -502,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.7803, y: -185.8353}
-  m_SizeDelta: {x: 599.5605, y: 302.6554}
+  m_AnchoredPosition: {x: 3.7803, y: -156.78589}
+  m_SizeDelta: {x: 599.56, y: 244.557}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268584869
 MonoBehaviour:
@@ -710,10 +710,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1572345939}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 5.5, y: 138}
-  m_SizeDelta: {x: 623, y: 188}
+  m_AnchorMin: {x: 0.07478552, y: 0.05524518}
+  m_AnchorMax: {x: 0.94200003, y: 0.73377407}
+  m_AnchoredPosition: {x: -0.5, y: 0.29940796}
+  m_SizeDelta: {x: 1, y: 0.56900024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &338956941
 MonoBehaviour:
@@ -766,18 +766,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 30
-    m_Right: 30
-    m_Top: 75
-    m_Bottom: 70
+    m_Left: 10
+    m_Right: 10
+    m_Top: 90
+    m_Bottom: 60
   m_ChildAlignment: 4
-  m_Spacing: 20
+  m_Spacing: 100
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
-  m_ChildScaleHeight: 1
+  m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!1 &394150404
 GameObject:
@@ -1293,10 +1293,10 @@ RectTransform:
   - {fileID: 1650269291}
   m_Father: {fileID: 196279558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000015259, y: 358}
-  m_SizeDelta: {x: 718, y: 363}
+  m_AnchorMin: {x: 0.18310152, y: 0.23943713}
+  m_AnchorMax: {x: 0.8113462, y: 0.929}
+  m_AnchoredPosition: {x: 3.0559692, y: -0.8329773}
+  m_SizeDelta: {x: 2, y: -2.6649933}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566297468
 MonoBehaviour:
@@ -1416,10 +1416,10 @@ RectTransform:
   - {fileID: 268584868}
   m_Father: {fileID: 1023407128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000015259, y: 358}
-  m_SizeDelta: {x: 718, y: 363}
+  m_AnchorMin: {x: 0.186, y: 0.275}
+  m_AnchorMax: {x: 0.8157343, y: 0.92}
+  m_AnchoredPosition: {x: -0.5, y: 0.4630127}
+  m_SizeDelta: {x: 1.0001001, y: 0.07400131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &619670321
 MonoBehaviour:
@@ -1493,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 239}
+  m_AnchoredPosition: {x: 150, y: 176}
   m_SizeDelta: {x: 154.816, y: 31.716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &634630763
@@ -1671,9 +1671,9 @@ RectTransform:
   - {fileID: 16331360}
   m_Father: {fileID: 1023407128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000000033033, y: -232}
+  m_AnchorMin: {x: 0.5, y: 0.126}
+  m_AnchorMax: {x: 0.5, y: 0.126}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 160, y: 74.956}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823473064
@@ -1720,8 +1720,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2105379755}
-        m_TargetAssemblyTypeName: FadePanelController, Assembly-CSharp
+      - m_Target: {fileID: 1345653337}
+        m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
         m_MethodName: OK
         m_Mode: 1
         m_Arguments:
@@ -1802,18 +1802,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 2
-    m_Right: 2
-    m_Top: 35
-    m_Bottom: 40
+    m_Left: 0
+    m_Right: 0
+    m_Top: 10
+    m_Bottom: 10
   m_ChildAlignment: 4
-  m_Spacing: 2
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 1
-  m_ChildScaleHeight: 1
+  m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &823795367
 MonoBehaviour:
@@ -2123,10 +2123,10 @@ RectTransform:
   - {fileID: 1044550517}
   m_Father: {fileID: 196279558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000000033033, y: -232}
-  m_SizeDelta: {x: 160, y: 74.956}
+  m_AnchorMin: {x: 0.5, y: 0.112}
+  m_AnchorMax: {x: 0.5, y: 0.112}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 74.95599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026862834
 MonoBehaviour:
@@ -2171,7 +2171,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1026862835}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1345653337}
+        m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
+        m_MethodName: OK
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1026862835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2475,6 +2487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345653335}
   - component: {fileID: 1345653336}
+  - component: {fileID: 1345653337}
   m_Layer: 0
   m_Name: EndGameManager
   m_TagString: Untagged
@@ -2518,6 +2531,19 @@ MonoBehaviour:
     gameType: 0
     counterValue: 2
   currentCounterValue: 0
+--- !u!114 &1345653337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345653334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6f4b699e33cfe4f9cbc124aeda0179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToload: SplashScene
 --- !u!1 &1401684191
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,7 +2695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.25333333, y: 0.5808519}
   m_AnchorMax: {x: 0.7533334, y: 0.61}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.4079971, y: -115}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1424275423
@@ -2850,7 +2876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.24000001, y: 0.62100005}
   m_AnchorMax: {x: 0.7533334, y: 0.6714073}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1.4079971, y: -113}
   m_SizeDelta: {x: 0, y: -0.0000038146973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468256100
@@ -3332,7 +3358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -100}
+  m_AnchoredPosition: {x: 150, y: -54}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2119326921

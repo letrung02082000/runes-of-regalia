@@ -26,11 +26,11 @@ MonoBehaviour:
     gameType: 1
     counterValue: 100
   levelGoals:
-  - numberNeeded: 2
+  - numberNeeded: 10
     numberCollected: 0
     goalSprite: {fileID: 21300000, guid: dd2e9b4a05821184eb16ee2ec730a2ae, type: 3}
     matchValue: Teal Dot
-  - numberNeeded: 5
+  - numberNeeded: 10
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 37351c6f3ebfb0648a35c52e677f23bd, type: 3}
-    matchValue: Breakable
+    goalSprite: {fileID: 21300000, guid: 7ce812ff0e689eb419b67626db6f4aa3, type: 3}
+    matchValue: Salmon Dot
